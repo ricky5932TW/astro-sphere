@@ -5,28 +5,45 @@ import BottomLayout from "@layouts/BottomLayout.astro"
 
 const RESUME = {
   TITLE: "履歷",
-  DESCRIPTION: "陳志豪的個人履歷，全端軟體工程師。",
+  DESCRIPTION: "張幼昇的個人履歷，AI/ML Engineer 求職中。",
 }
 
 const skills = {
-  frontend: ["React", "Next.js", "TypeScript", "Vue.js", "Tailwind CSS", "HTML/CSS"],
-  backend: ["Node.js", "Express", "Python", "PostgreSQL", "Redis", "Prisma"],
-  devops: ["Docker", "AWS (EC2, S3, Lambda)", "GitHub Actions", "CI/CD", "Nginx"],
-  tools: ["Git", "Figma", "Jira", "Postman", "Webpack", "Vite"],
+  ml: ["PyTorch", "scikit-learn", "OpenCV", "CNN", "Transfer Learning", "時序資料建模", "特徵工程", "資料前處理"],
+  lang: ["Python", "NumPy", "SciPy", "Pandas", "Matplotlib"],
+  engineering: ["Flask", "Docker", "Docker Compose", "GitHub Actions", "SQLite", "Git"],
+  domain: ["Moldex3D", "射出成形製程", "CAE 模擬", "DSP 訊號處理"],
 }
 
 const education = [
   {
-    school: "國立臺灣大學",
-    degree: "資訊工程學系 學士",
-    period: "2014 – 2018",
-    notes: ["GPA 3.8 / 4.0", "畢業專題：以機器學習預測股市短期波動"],
+    school: "國立中央大學",
+    degree: "機械工程研究所 人工智慧應用組 碩士（就讀中）",
+    period: "2024/09 – 2026/10（預計）",
+    notes: [
+      "論文主題：少樣本條件下射出成形模擬光彈圖預測",
+      "指導教授：機械所 AI 應用組",
+    ],
+  },
+  {
+    school: "國立中央大學",
+    degree: "機械工程學系 光機電工程組 學士",
+    period: "2019/09 – 2024/06",
+    notes: [
+      "修習 Python 程式設計、數值方法、材料力學、流體力學等課程",
+    ],
   },
 ]
 
-const certificates = [
-  { name: "AWS Certified Developer – Associate", issuer: "Amazon Web Services", year: "2023" },
-  { name: "Google Professional Cloud Developer", issuer: "Google Cloud", year: "2022" },
+const awards = [
+  { name: "2025 教育部全國智慧製造大數據分析競賽", result: "入圍", role: "隊長" },
+  { name: "2024 教育部全國智慧製造大數據分析競賽", result: "優等獎", role: "隊員" },
+  { name: "2024 中央大學工學院 程式設計菁英賽", result: "佳作", role: "個人" },
+  { name: "2024 中央大學機械系 精進程式設計實作競賽", result: "第二名", role: "個人" },
+]
+
+const certs = [
+  { name: "TOEIC 多益", score: "875 分" },
 ]
 ---
 
@@ -45,12 +62,12 @@ const certificates = [
           個人資訊
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
-          <div><span class="font-medium text-black dark:text-white">姓名：</span>陳志豪</div>
-          <div><span class="font-medium text-black dark:text-white">居住地：</span>台北市，台灣</div>
+          <div><span class="font-medium text-black dark:text-white">姓名：</span>張幼昇</div>
+          <div><span class="font-medium text-black dark:text-white">居住地：</span>桃園市中壢區</div>
           <div>
             <span class="font-medium text-black dark:text-white">Email：</span>
-            <a href="mailto:chih.hao.chen@example.com" class="underline hover:text-black dark:hover:text-white blend">
-              chih.hao.chen@example.com
+            <a href="mailto:ricky5932tw@gmail.com" class="underline hover:text-black dark:hover:text-white blend">
+              ricky5932tw@gmail.com
             </a>
           </div>
           <div>
@@ -61,11 +78,11 @@ const certificates = [
           </div>
           <div>
             <span class="font-medium text-black dark:text-white">LinkedIn：</span>
-            <a href="https://www.linkedin.com/in/chih-hao-chen/" target="_blank" class="underline hover:text-black dark:hover:text-white blend">
-              linkedin.com/in/chih-hao-chen
+            <a href="https://www.linkedin.com/in/%E5%B9%BC%E6%98%87-%E5%BC%B5-3b5897361/" target="_blank" class="underline hover:text-black dark:hover:text-white blend">
+              linkedin.com/in/張幼昇
             </a>
           </div>
-          <div><span class="font-medium text-black dark:text-white">語言：</span>中文（母語）、英文（流利）</div>
+          <div><span class="font-medium text-black dark:text-white">語言：</span>中文（母語）、英文（TOEIC 875）</div>
         </div>
       </section>
 
@@ -75,8 +92,8 @@ const certificates = [
           求職目標
         </h2>
         <p class="text-sm leading-relaxed">
-          擁有五年以上全端開發經驗，熟悉 React、Node.js 與雲端服務。曾帶領小型工程團隊，具備從需求分析到部署維運的完整能力。
-          目前積極尋找<strong>全端工程師</strong>或<strong>前端工程師</strong>職缺，期待加入注重技術品質、持續學習的工程文化，共同打造對用戶有價值的產品。
+          國立中央大學機械所人工智慧應用組碩士生，研究方向以射出成形製程與資料分析為主，具備電腦視覺、時序資料建模與製程理解的跨域能力。連續兩年入圍/獲獎於教育部全國智慧製造競賽，熟悉將實際製程問題拆解為可建模任務。
+          期望投入 <strong>Data Scientist</strong>、<strong>AI/ML Engineer</strong> 或 <strong>IT/QA</strong> 相關職位，貢獻機械背景與資料分析能力。
         </p>
       </section>
 
@@ -87,33 +104,33 @@ const certificates = [
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
           <div>
-            <p class="font-medium text-black dark:text-white mb-2">前端</p>
+            <p class="font-medium text-black dark:text-white mb-2">機器學習 / 深度學習</p>
             <div class="flex flex-wrap gap-2">
-              {skills.frontend.map(s => (
+              {skills.ml.map(s => (
                 <span class="px-2 py-0.5 rounded border border-black/15 dark:border-white/20 text-xs">{s}</span>
               ))}
             </div>
           </div>
           <div>
-            <p class="font-medium text-black dark:text-white mb-2">後端 & 資料庫</p>
+            <p class="font-medium text-black dark:text-white mb-2">程式語言 / 資料處理</p>
             <div class="flex flex-wrap gap-2">
-              {skills.backend.map(s => (
+              {skills.lang.map(s => (
                 <span class="px-2 py-0.5 rounded border border-black/15 dark:border-white/20 text-xs">{s}</span>
               ))}
             </div>
           </div>
           <div>
-            <p class="font-medium text-black dark:text-white mb-2">DevOps & 雲端</p>
+            <p class="font-medium text-black dark:text-white mb-2">工程工具</p>
             <div class="flex flex-wrap gap-2">
-              {skills.devops.map(s => (
+              {skills.engineering.map(s => (
                 <span class="px-2 py-0.5 rounded border border-black/15 dark:border-white/20 text-xs">{s}</span>
               ))}
             </div>
           </div>
           <div>
-            <p class="font-medium text-black dark:text-white mb-2">工具</p>
+            <p class="font-medium text-black dark:text-white mb-2">領域知識</p>
             <div class="flex flex-wrap gap-2">
-              {skills.tools.map(s => (
+              {skills.domain.map(s => (
                 <span class="px-2 py-0.5 rounded border border-black/15 dark:border-white/20 text-xs">{s}</span>
               ))}
             </div>
@@ -121,56 +138,70 @@ const certificates = [
         </div>
       </section>
 
-      <!-- 工作經歷 -->
+      <!-- 經歷 -->
       <section>
         <h2 class="text-lg font-semibold text-black dark:text-white border-b border-black/10 dark:border-white/20 pb-2 mb-4">
-          工作經歷
+          研究與助教經歷
         </h2>
         <ul class="space-y-8 text-sm">
           <li>
             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
               <div>
-                <p class="font-semibold text-black dark:text-white">趨勢科技 Trend Micro</p>
-                <p class="text-xs opacity-75">資深前端工程師</p>
+                <p class="font-semibold text-black dark:text-white">國立中央大學機械所 智慧製造實驗室</p>
+                <p class="text-xs opacity-75">研究生 — 電腦視覺 / 製程資料分析</p>
               </div>
-              <p class="text-xs opacity-60 shrink-0">Mar 2022 – 至今</p>
+              <p class="text-xs opacity-60 shrink-0">2024/09 – 至今</p>
             </div>
             <ul class="mt-2 space-y-1 list-disc list-inside opacity-80">
-              <li>主導以 React + TypeScript 重構舊版 AngularJS 管理後台，頁面載入速度提升 40%。</li>
-              <li>設計可復用 UI 元件庫（Tailwind CSS），統一全產品線視覺規範。</li>
-              <li>建置前端 CI/CD 流程（GitHub Actions + Docker），縮短部署時間至原本的 1/3。</li>
-              <li>帶領三人小組，與後端團隊協作定義 REST API 介面規範。</li>
+              <li>論文：少樣本條件下的射出成形模擬光彈圖預測，~300 張影像完成端到端訓練。</li>
+              <li>以 PyTorch 設計 CNN 架構，結合遷移學習與資料增強應對少樣本限制。</li>
+              <li>進行消融實驗驗證各模組貢獻；協助新進成員熟悉資料前處理與 Git 流程。</li>
             </ul>
           </li>
           <li>
             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
               <div>
-                <p class="font-semibold text-black dark:text-white">91APP</p>
-                <p class="text-xs opacity-75">全端工程師</p>
+                <p class="font-semibold text-black dark:text-white">國立中央大學機械工程學系</p>
+                <p class="text-xs opacity-75">課程助教 — Python 與機器學習</p>
               </div>
-              <p class="text-xs opacity-60 shrink-0">Jul 2019 – Feb 2022</p>
+              <p class="text-xs opacity-60 shrink-0">2025/02 – 至今</p>
             </div>
             <ul class="mt-2 space-y-1 list-disc list-inside opacity-80">
-              <li>使用 Node.js + Express 開發後端 API，串接金流（藍新、LINE Pay）與物流服務。</li>
-              <li>以 Vue.js 實作店家商品管理後台，日活躍用戶超過 5,000 名商家。</li>
-              <li>優化 PostgreSQL 查詢效能，將報表生成速度從 12 秒縮短至 1.5 秒。</li>
-              <li>導入 Redis 快取機制，有效降低資料庫負載達 60%。</li>
+              <li>批改作業與專案，提供 Python 實作（NumPy、scikit-learn、PyTorch）回饋。</li>
+              <li>協助設計期末專案題目，涵蓋分類、回歸與影像辨識任務。</li>
             </ul>
           </li>
           <li>
             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
               <div>
-                <p class="font-semibold text-black dark:text-white">iKala</p>
-                <p class="text-xs opacity-75">軟體工程師（實習）</p>
+                <p class="font-semibold text-black dark:text-white">國立中央大學機械工程學系</p>
+                <p class="text-xs opacity-75">課程助教 — 靜力學與材料力學</p>
               </div>
-              <p class="text-xs opacity-60 shrink-0">Jul 2018 – Jun 2019</p>
+              <p class="text-xs opacity-60 shrink-0">2023/09 – 2025/01</p>
             </div>
             <ul class="mt-2 space-y-1 list-disc list-inside opacity-80">
-              <li>以 Python（Flask）開發後端爬蟲與資料處理管線，涵蓋 Instagram、YouTube 資料抓取。</li>
-              <li>以 React 實作數據視覺化儀表板，整合 Chart.js 呈現 KOL 分析報表。</li>
-              <li>撰寫自動化測試（Jest + Pytest），核心模組測試覆蓋率達 80%。</li>
+              <li>每週課業輔導，解說靜定結構分析、應力應變與材料破壞理論。</li>
+              <li>主持期末考前複習課，整理重點題型與解題策略。</li>
             </ul>
           </li>
+        </ul>
+      </section>
+
+      <!-- 競賽與獎項 -->
+      <section>
+        <h2 class="text-lg font-semibold text-black dark:text-white border-b border-black/10 dark:border-white/20 pb-2 mb-4">
+          競賽與獎項
+        </h2>
+        <ul class="space-y-3 text-sm">
+          {awards.map(award => (
+            <li class="flex flex-col sm:flex-row sm:justify-between gap-1">
+              <div>
+                <span class="font-medium text-black dark:text-white">{award.name}</span>
+                <span class="opacity-60 ml-2 text-xs">（{award.role}）</span>
+              </div>
+              <span class="text-xs font-semibold text-black dark:text-white shrink-0">{award.result}</span>
+            </li>
+          ))}
         </ul>
       </section>
 
@@ -179,7 +210,7 @@ const certificates = [
         <h2 class="text-lg font-semibold text-black dark:text-white border-b border-black/10 dark:border-white/20 pb-2 mb-4">
           學歷
         </h2>
-        <ul class="space-y-4 text-sm">
+        <ul class="space-y-6 text-sm">
           {education.map(edu => (
             <li>
               <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
@@ -197,28 +228,29 @@ const certificates = [
         </ul>
       </section>
 
-      <!-- 證照 -->
+      <!-- 語文與證照 -->
       <section>
         <h2 class="text-lg font-semibold text-black dark:text-white border-b border-black/10 dark:border-white/20 pb-2 mb-4">
-          專業證照
+          語文能力 & 證照
         </h2>
         <ul class="space-y-2 text-sm">
-          {certificates.map(cert => (
-            <li class="flex flex-col sm:flex-row sm:justify-between gap-1">
-              <div>
-                <span class="font-medium text-black dark:text-white">{cert.name}</span>
-                <span class="opacity-60 ml-2">— {cert.issuer}</span>
-              </div>
-              <span class="text-xs opacity-60 shrink-0">{cert.year}</span>
+          {certs.map(cert => (
+            <li class="flex gap-2">
+              <span class="font-medium text-black dark:text-white">{cert.name}：</span>
+              <span class="opacity-80">{cert.score}</span>
             </li>
           ))}
+          <li class="flex gap-2">
+            <span class="font-medium text-black dark:text-white">英文：</span>
+            <span class="opacity-80">聽／中等　說／中等　讀／中等　寫／中等</span>
+          </li>
         </ul>
       </section>
 
-      <!-- 下載按鈕 -->
+      <!-- 聯絡 -->
       <section class="pb-4">
         <a
-          href="mailto:chih.hao.chen@example.com?subject=應徵工程師職位"
+          href="mailto:ricky5932tw@gmail.com?subject=求職機會 — 張幼昇"
           class="inline-block py-2 px-6 rounded text-sm bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend"
         >
           📧 立即聯絡我

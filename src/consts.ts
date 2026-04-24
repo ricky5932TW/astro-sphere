@@ -2,27 +2,27 @@ import type { Site, Page, Links, Socials } from "@types"
 
 // Global
 export const SITE: Site = {
-  TITLE: "陳志豪 | 軟體工程師",
-  DESCRIPTION: "陳志豪的個人求職網站。全端軟體工程師，擅長 React、Node.js 與雲端技術，積極尋找新機會。",
-  AUTHOR: "陳志豪",
+  TITLE: "張幼昇 | AI/ML Engineer",
+  DESCRIPTION: "張幼昇的個人求職網站。國立中央大學機械所 AI 應用組碩士生，專注電腦視覺、時序資料分析與智慧製造，積極尋找 Data Scientist / AI/ML Engineer / QA 相關職缺。",
+  AUTHOR: "張幼昇",
 }
 
 // Work Page
 export const WORK: Page = {
-  TITLE: "工作經歷",
-  DESCRIPTION: "我曾任職的公司與職位。",
+  TITLE: "學術與助教經歷",
+  DESCRIPTION: "研究、競賽與助教相關經歷。",
 }
 
 // Blog Page
 export const BLOG: Page = {
   TITLE: "部落格",
-  DESCRIPTION: "分享我對技術與開發的思考與心得。",
+  DESCRIPTION: "分享技術筆記、研究心得與學習記錄。",
 }
 
 // Projects Page 
 export const PROJECTS: Page = {
   TITLE: "專案作品",
-  DESCRIPTION: "我近期參與開發的專案。",
+  DESCRIPTION: "我參與開發的個人與競賽專案。",
 }
 
 // Search Page
@@ -38,7 +38,7 @@ export const LINKS: Links = [
     HREF: "/", 
   },
   { 
-    TEXT: "工作經歷", 
+    TEXT: "經歷", 
     HREF: "/work", 
   },
   { 
@@ -60,8 +60,8 @@ export const SOCIALS: Socials = [
   { 
     NAME: "Email",
     ICON: "email", 
-    TEXT: "chih.hao.chen@example.com",
-    HREF: "mailto:chih.hao.chen@example.com",
+    TEXT: "ricky5932tw@gmail.com",
+    HREF: "mailto:ricky5932tw@gmail.com",
   },
   { 
     NAME: "Github",
@@ -72,8 +72,9 @@ export const SOCIALS: Socials = [
   { 
     NAME: "LinkedIn",
     ICON: "linkedin",
-    TEXT: "chih-hao-chen",
-    HREF: "https://www.linkedin.com/in/chih-hao-chen/",
+    TEXT: "張幼昇",
+    HREF: "https://www.linkedin.com/in/%E5%B9%BC%E6%98%87-%E5%BC%B5-3b5897361/",
   },
 ]
+
 

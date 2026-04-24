@@ -1,26 +1,34 @@
 ---
-title: "LinkMeet — 活動報名與票務平台"
-summary: "整合線上報名、QR Code 驗票與即時人數追蹤的活動管理 SaaS 平台。"
-date: "Aug 20 2023"
+title: "2025 智慧製造大數據競賽 — 多實例學習異常辨識"
+summary: "以 Multiple Instance Learning 處理缺失時序資料，異常辨識準確率達 99%，入圍教育部全國競賽。"
+date: "May 01 2025"
 draft: false
 tags:
-- Next.js
-- TypeScript
-- Prisma
-- PostgreSQL
-- Stripe
-repoUrl: https://github.com/ricky5932TW/linkmeet
+- Python
+- PyTorch
+- scikit-learn
+- 時序資料
+- 異常偵測
+- Multiple Instance Learning
 ---
 
-LinkMeet 是一個活動報名與票務管理平台，讓主辦方可快速建立活動頁面、設定票種，並透過 Stripe 收款，參加者則可線上報名並取得 QR Code 電子票券。
+擔任隊長，代表國立中央大學參加 **2025 教育部全國智慧製造大數據分析競賽**，最終成績**入圍**。
 
-## 主要功能
+## 問題挑戰
 
-- **活動建立**：支援多票種設定（早鳥票、一般票、VIP）、名額限制與時間控制。
-- **線上收款**：整合 Stripe Checkout，支援信用卡與 Apple Pay，自動退款流程。
-- **QR Code 驗票**：入場時掃描驗票，即時更新入場狀態，防止重複使用。
-- **數據儀表板**：即時顯示報名人數、票種銷售比例、收款金額。
+題目為工業設備感測器時序資料的異常辨識，資料存在大量缺失值與不規則取樣，傳統方法難以直接建模。
 
-## 技術架構
+## 解題策略
 
-以 Next.js 14（App Router）為核心，搭配 Prisma + PostgreSQL 作為資料層，Stripe Webhooks 處理付款事件，並使用 Zod 進行表單與 API 資料驗證。
+1. **多實例學習（Multiple Instance Learning, MIL）**：將缺失區段視為弱標記集合（bag），不需對每個時間點單獨標注，降低標注需求。
+2. **兩階段建模**：先以統計方法還原整體平均行為，再以局部模型定位異常區域，降低缺失資料的干擾。
+3. **模型組合（Ensemble）**：整合多個基礎模型的預測結果，規避單一模型對時序缺失的敏感性。
+
+## 成果
+
+- 異常辨識準確率：**99%**
+- 額外協助實驗室新進成員處理另一子題，完成端到端建模流程指導
+
+## 技術棧
+
+Python · PyTorch · scikit-learn · pandas · NumPy · Matplotlib
