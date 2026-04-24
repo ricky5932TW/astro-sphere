@@ -80,20 +80,20 @@ const stack = [
       <div class='relative w-full h-full flex items-center justify-center'>
         <div class='p-5 text-center'>
           <p class='animated text-lg md:text-xl lg:text-2xl font-semibold opacity-75'>
-            Hello, I am ...
+            嗨，我是 ...
           </p>
-          <p class='animated text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-black dark:text-white'>
-            Astro Sphere
+          <p class='animated text-2xl md:text-3xl lg:text-4xl font-bold text-black dark:text-white'>
+            張幼昇
           </p>
           <p class='animated text-sm md:text-base lg:text-lg opacity-75'>
-            Currently designing products for humans.
+            AI / ML Engineer｜電腦視覺 · 時序資料 · 智慧製造
           </p>
           <div id="ctaButtons" class='animated flex flex-wrap gap-4 justify-center mt-5'>
-            <a href='/blog' class='py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend'>
-              Read my blog
+            <a href='/resume' class='py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend'>
+              查看履歷
             </a>
-            <a href='/work' class='py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend'>
-              View my work
+            <a href='/projects' class='py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend'>
+              查看專案作品
             </a>
           </div>
         </div>
@@ -107,12 +107,12 @@ const stack = [
       <!-- About Section -->
       <section class="animate">
         <article>
-          <p>I am a <b><i>software engineer</i></b>, <b><i>ui/ux designer</i></b>, <b><i>product planner</i></b>, <b><i>mentor</i></b>, <b><i>student</i></b>, <b><i>minimalist</i></b>, <b><i>eternal optimist</i></b>, <b><i>crypto enthusiast</i></b> and <b><i>sarcasm connoisseur</i></b>.</p>
-          <p>I love to both build and break things. I am motivated by challenging projects with self-guided research and dynamic problem solving. My true passion is crafting creative front end designs with unique takes on color, typography and motion.</p>
-          <p>During my career</p>
-          <p>I have built products ranging from marketing and ecommerce websites to complex enterprise apps with focus on delivering fast, elegant code along with delightful user interfaces.</p>
-          <p>Now</p>
-          <p>I currently work as a software engineer at StreamlineFS, where I do product planning, design and development.</p>
+          <p>目前就讀<b><i>國立中央大學機械所人工智慧應用組</i></b>，研究方向聚焦於<b><i>射出成形製程模擬</i></b>與<b><i>電腦視覺</i></b>，目標是在少樣本條件下完成光彈圖預測。</p>
+          <p>大學期間開始接觸 Python 與程式設計，碩士階段持續使用 PyTorch、scikit-learn 等工具，累積<b><i>資料前處理</i></b>、<b><i>特徵工程</i></b>、<b><i>模型訓練</i></b>與<b><i>結果分析</i></b>的完整實作經驗。</p>
+          <p>競賽成果</p>
+          <p>連續兩年入圍/獲獎於<b><i>教育部全國智慧製造大數據分析競賽</i></b>（2024 優等獎、2025 入圍），主導多實例學習、二維傅立葉轉換等技術應用，異常辨識準確率最高達 99%。</p>
+          <p>目前正積極尋找</p>
+          <p>希望投入<b><i>Data Scientist</i></b>、<b><i>AI/ML Engineer</i></b> 或 <b><i>IT / QA</i></b> 等相關職位，期望將機械背景、製程理解與資料分析能力結合，加入注重技術深度與實際落地的團隊。</p>
         </article>
       </section>
 
@@ -121,11 +121,11 @@ const stack = [
         <div class="space-y-4">
           <div class="flex justify-between">
             <p class="font-semibold text-black dark:text-white">
-              Recent posts
+              最新文章
             </p>
             <a href="/blog" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
               <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
-                All posts
+                所有文章
               </span>
             </a>
           </div>
@@ -143,7 +143,7 @@ const stack = [
       <section class="animate">
         <div class="space-y-4">
           <p class="font-semibold text-black dark:text-white">
-            Website build with
+            本站技術棧
           </p>
           <div class="flex flex-wrap items-center gap-2 mt-5">
             {stack.map(item => (
@@ -155,7 +155,7 @@ const stack = [
             ))}
           </div>
           <div>
-            Performing reactivity and statefulness, special guest
+            互動性與狀態管理，特別感謝
             <a href="https://www.solidjs.com/" target="_blank" class="w-fit group underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
               <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
                 SolidJS
@@ -170,11 +170,11 @@ const stack = [
         <div class="space-y-4">
           <div class="flex justify-between">
             <p class="font-semibold text-black dark:text-white">
-              Recent projects
+              近期專案
             </p>
             <a href="/projects" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
               <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
-                All projects
+                所有專案
               </span>
             </a>
           </div>
@@ -192,10 +192,10 @@ const stack = [
       <section class="animate">
         <div>
           <p class="font-semibold text-black dark:text-white">
-            Let's Connect
+            聯絡我
           </p>
           <p>
-            Reach out to me via email or on social media.
+            歡迎透過 Email 或社群媒體聯繫我，期待與您進一步交流！
           </p>
           <div class="grid grid-cols-4 gap-y-2 mt-4 auto-cols-min">
             {SOCIALS.map(social => (

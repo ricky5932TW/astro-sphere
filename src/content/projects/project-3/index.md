@@ -1,12 +1,36 @@
 ---
-title: "Project Three"
-summary: "Lorem ipsum dolor sit amet"
-date: "Mar 16 2022"
+title: "2024 智慧製造大數據競賽 — 瑕疵影像分類"
+summary: "以二維傅立葉轉換結合原圖特徵融合，F1-score 從 96% 提升至 98%，獲教育部全國競賽優等獎。"
+date: "May 01 2024"
 draft: false
 tags:
-- Vue
-- Javascript
-- Tailwind
+- Python
+- PyTorch
+- OpenCV
+- 電腦視覺
+- 影像分類
+- FFT
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+代表國立中央大學參加 **2024 教育部全國智慧製造大數據分析競賽**，最終獲得**優等獎**。
+
+## 問題挑戰
+
+工業零件表面瑕疵分類，訓練資料中不同瑕疵類型的分布極不均衡，且部分類別僅有少量樣本。
+
+## 解題策略
+
+1. **瑕疵分布先驗條件**：分析各類瑕疵在影像中的空間分布規律，以此設計資料擴增策略，緩解類別不均衡問題。
+2. **二維傅立葉轉換（2D FFT）**：將原始影像轉換至頻域，捕捉週期性紋理與結構性瑕疵特徵，補充空間域難以描述的資訊。
+3. **多分支特徵融合**：原圖分支與 FFT 分支分別提取特徵，於模型中段進行特徵拼接（Concatenation），讓模型同時學習空間與頻域資訊。
+
+## 成果
+
+| 指標 | Baseline | 本方法 |
+|---|---|---|
+| F1-score | 96% | **98%** |
+| Accuracy | 95.8% | **97.6%** |
+
+## 技術棧
+
+Python · PyTorch · OpenCV · NumPy · SciPy · scikit-learn · Matplotlib

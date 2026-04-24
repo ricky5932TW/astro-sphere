@@ -2,52 +2,56 @@ import type { Site, Page, Links, Socials } from "@types"
 
 // Global
 export const SITE: Site = {
-  TITLE: "Astro Sphere",
-  DESCRIPTION: "Welcome to Astro Sphere, a portfolio and blog for designers and developers.",
-  AUTHOR: "Mark Horn",
+  TITLE: "張幼昇 | AI/ML Engineer",
+  DESCRIPTION: "張幼昇的個人求職網站。國立中央大學機械所 AI 應用組碩士生，專注電腦視覺、時序資料分析與智慧製造，積極尋找 Data Scientist / AI/ML Engineer / QA 相關職缺。",
+  AUTHOR: "張幼昇",
 }
 
 // Work Page
 export const WORK: Page = {
-  TITLE: "Work",
-  DESCRIPTION: "Places I have worked.",
+  TITLE: "學術與助教經歷",
+  DESCRIPTION: "研究、競賽與助教相關經歷。",
 }
 
 // Blog Page
 export const BLOG: Page = {
-  TITLE: "Blog",
-  DESCRIPTION: "Writing on topics I am passionate about.",
+  TITLE: "部落格",
+  DESCRIPTION: "分享技術筆記、研究心得與學習記錄。",
 }
 
 // Projects Page 
 export const PROJECTS: Page = {
-  TITLE: "Projects",
-  DESCRIPTION: "Recent projects I have worked on.",
+  TITLE: "專案作品",
+  DESCRIPTION: "我參與開發的個人與競賽專案。",
 }
 
 // Search Page
 export const SEARCH: Page = {
-  TITLE: "Search",
-  DESCRIPTION: "Search all posts and projects by keyword.",
+  TITLE: "搜尋",
+  DESCRIPTION: "以關鍵字搜尋所有文章與專案。",
 }
 
 // Links
 export const LINKS: Links = [
   { 
-    TEXT: "Home", 
+    TEXT: "首頁", 
     HREF: "/", 
   },
   { 
-    TEXT: "Work", 
+    TEXT: "經歷", 
     HREF: "/work", 
   },
   { 
-    TEXT: "Blog", 
+    TEXT: "專案作品", 
+    HREF: "/projects", 
+  },
+  { 
+    TEXT: "部落格", 
     HREF: "/blog", 
   },
   { 
-    TEXT: "Projects", 
-    HREF: "/projects", 
+    TEXT: "履歷", 
+    HREF: "/resume", 
   },
 ]
 
@@ -56,26 +60,21 @@ export const SOCIALS: Socials = [
   { 
     NAME: "Email",
     ICON: "email", 
-    TEXT: "markhorn.dev@gmail.com",
-    HREF: "mailto:markhorn.dev@gmail.com",
+    TEXT: "ricky5932tw@gmail.com",
+    HREF: "mailto:ricky5932tw@gmail.com",
   },
   { 
     NAME: "Github",
     ICON: "github",
-    TEXT: "markhorn-dev",
-    HREF: "https://github.com/markhorn-dev/astro-sphere"
+    TEXT: "ricky5932TW",
+    HREF: "https://github.com/ricky5932TW"
   },
   { 
     NAME: "LinkedIn",
     ICON: "linkedin",
-    TEXT: "markhorn-dev",
-    HREF: "https://www.linkedin.com/in/markhorn-dev/",
-  },
-  { 
-    NAME: "Twitter",
-    ICON: "twitter-x",
-    TEXT: "markhorn_dev",
-    HREF: "https://twitter.com/markhorn_dev",
+    TEXT: "張幼昇",
+    HREF: "https://www.linkedin.com/in/%E5%B9%BC%E6%98%87-%E5%BC%B5-3b5897361/",
   },
 ]
+
 

@@ -1,0 +1,262 @@
+---
+import PageLayout from "@layouts/PageLayout.astro"
+import TopLayout from "@layouts/TopLayout.astro"
+import BottomLayout from "@layouts/BottomLayout.astro"
+
+const RESUME = {
+  TITLE: "履歷",
+  DESCRIPTION: "張幼昇的個人履歷，AI/ML Engineer 求職中。",
+}
+
+const skills = {
+  ml: ["PyTorch", "scikit-learn", "OpenCV", "CNN", "Transfer Learning", "時序資料建模", "特徵工程", "資料前處理"],
+  lang: ["Python", "NumPy", "SciPy", "Pandas", "Matplotlib"],
+  engineering: ["Flask", "Docker", "Docker Compose", "GitHub Actions", "SQLite", "Git"],
+  domain: ["Moldex3D", "射出成形製程", "CAE 模擬", "DSP 訊號處理"],
+}
+
+const education = [
+  {
+    school: "國立中央大學",
+    degree: "機械工程研究所 人工智慧應用組 碩士（就讀中）",
+    period: "2024/09 – 2026/10（預計）",
+    notes: [
+      "論文主題：少樣本條件下射出成形模擬光彈圖預測",
+      "指導教授：機械所 AI 應用組",
+    ],
+  },
+  {
+    school: "國立中央大學",
+    degree: "機械工程學系 光機電工程組 學士",
+    period: "2019/09 – 2024/06",
+    notes: [
+      "修習 Python 程式設計、數值方法、材料力學、流體力學等課程",
+    ],
+  },
+]
+
+const awards = [
+  { name: "2025 教育部全國智慧製造大數據分析競賽", result: "入圍", role: "隊長" },
+  { name: "2024 教育部全國智慧製造大數據分析競賽", result: "優等獎", role: "隊員" },
+  { name: "2024 中央大學工學院 程式設計菁英賽", result: "佳作", role: "個人" },
+  { name: "2024 中央大學機械系 精進程式設計實作競賽", result: "第二名", role: "個人" },
+]
+
+const certs = [
+  { name: "TOEIC 多益", score: "875 分" },
+]
+---
+
+<PageLayout title={RESUME.TITLE} description={RESUME.DESCRIPTION}>
+  <TopLayout>
+    <div class="animate page-heading">
+      履歷
+    </div>
+  </TopLayout>
+  <BottomLayout>
+    <div class="animate space-y-12">
+
+      <!-- 個人資訊 -->
+      <section>
+        <h2 class="text-lg font-semibold text-black dark:text-white border-b border-black/10 dark:border-white/20 pb-2 mb-4">
+          個人資訊
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+          <div><span class="font-medium text-black dark:text-white">姓名：</span>張幼昇</div>
+          <div><span class="font-medium text-black dark:text-white">居住地：</span>桃園市中壢區</div>
+          <div>
+            <span class="font-medium text-black dark:text-white">Email：</span>
+            <a href="mailto:ricky5932tw@gmail.com" class="underline hover:text-black dark:hover:text-white blend">
+              ricky5932tw@gmail.com
+            </a>
+          </div>
+          <div>
+            <span class="font-medium text-black dark:text-white">GitHub：</span>
+            <a href="https://github.com/ricky5932TW" target="_blank" class="underline hover:text-black dark:hover:text-white blend">
+              github.com/ricky5932TW
+            </a>
+          </div>
+          <div>
+            <span class="font-medium text-black dark:text-white">LinkedIn：</span>
+            <a href="https://www.linkedin.com/in/%E5%B9%BC%E6%98%87-%E5%BC%B5-3b5897361/" target="_blank" class="underline hover:text-black dark:hover:text-white blend">
+              linkedin.com/in/張幼昇
+            </a>
+          </div>
+          <div><span class="font-medium text-black dark:text-white">語言：</span>中文（母語）、英文（TOEIC 875）</div>
+        </div>
+      </section>
+
+      <!-- 求職目標 -->
+      <section>
+        <h2 class="text-lg font-semibold text-black dark:text-white border-b border-black/10 dark:border-white/20 pb-2 mb-4">
+          求職目標
+        </h2>
+        <p class="text-sm leading-relaxed">
+          國立中央大學機械所人工智慧應用組碩士生，研究方向以射出成形製程與資料分析為主，具備電腦視覺、時序資料建模與製程理解的跨域能力。連續兩年入圍/獲獎於教育部全國智慧製造競賽，熟悉將實際製程問題拆解為可建模任務。
+          期望投入 <strong>Data Scientist</strong>、<strong>AI/ML Engineer</strong> 或 <strong>IT/QA</strong> 相關職位，貢獻機械背景與資料分析能力。
+        </p>
+      </section>
+
+      <!-- 技術能力 -->
+      <section>
+        <h2 class="text-lg font-semibold text-black dark:text-white border-b border-black/10 dark:border-white/20 pb-2 mb-4">
+          技術能力
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+          <div>
+            <p class="font-medium text-black dark:text-white mb-2">機器學習 / 深度學習</p>
+            <div class="flex flex-wrap gap-2">
+              {skills.ml.map(s => (
+                <span class="px-2 py-0.5 rounded border border-black/15 dark:border-white/20 text-xs">{s}</span>
+              ))}
+            </div>
+          </div>
+          <div>
+            <p class="font-medium text-black dark:text-white mb-2">程式語言 / 資料處理</p>
+            <div class="flex flex-wrap gap-2">
+              {skills.lang.map(s => (
+                <span class="px-2 py-0.5 rounded border border-black/15 dark:border-white/20 text-xs">{s}</span>
+              ))}
+            </div>
+          </div>
+          <div>
+            <p class="font-medium text-black dark:text-white mb-2">工程工具</p>
+            <div class="flex flex-wrap gap-2">
+              {skills.engineering.map(s => (
+                <span class="px-2 py-0.5 rounded border border-black/15 dark:border-white/20 text-xs">{s}</span>
+              ))}
+            </div>
+          </div>
+          <div>
+            <p class="font-medium text-black dark:text-white mb-2">領域知識</p>
+            <div class="flex flex-wrap gap-2">
+              {skills.domain.map(s => (
+                <span class="px-2 py-0.5 rounded border border-black/15 dark:border-white/20 text-xs">{s}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 經歷 -->
+      <section>
+        <h2 class="text-lg font-semibold text-black dark:text-white border-b border-black/10 dark:border-white/20 pb-2 mb-4">
+          研究與助教經歷
+        </h2>
+        <ul class="space-y-8 text-sm">
+          <li>
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
+              <div>
+                <p class="font-semibold text-black dark:text-white">國立中央大學機械所 智慧製造實驗室</p>
+                <p class="text-xs opacity-75">研究生 — 電腦視覺 / 製程資料分析</p>
+              </div>
+              <p class="text-xs opacity-60 shrink-0">2024/09 – 至今</p>
+            </div>
+            <ul class="mt-2 space-y-1 list-disc list-inside opacity-80">
+              <li>論文：少樣本條件下的射出成形模擬光彈圖預測，~300 張影像完成端到端訓練。</li>
+              <li>以 PyTorch 設計 CNN 架構，結合遷移學習與資料增強應對少樣本限制。</li>
+              <li>進行消融實驗驗證各模組貢獻；協助新進成員熟悉資料前處理與 Git 流程。</li>
+            </ul>
+          </li>
+          <li>
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
+              <div>
+                <p class="font-semibold text-black dark:text-white">國立中央大學機械工程學系</p>
+                <p class="text-xs opacity-75">課程助教 — Python 與機器學習</p>
+              </div>
+              <p class="text-xs opacity-60 shrink-0">2025/02 – 至今</p>
+            </div>
+            <ul class="mt-2 space-y-1 list-disc list-inside opacity-80">
+              <li>批改作業與專案，提供 Python 實作（NumPy、scikit-learn、PyTorch）回饋。</li>
+              <li>協助設計期末專案題目，涵蓋分類、回歸與影像辨識任務。</li>
+            </ul>
+          </li>
+          <li>
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
+              <div>
+                <p class="font-semibold text-black dark:text-white">國立中央大學機械工程學系</p>
+                <p class="text-xs opacity-75">課程助教 — 靜力學與材料力學</p>
+              </div>
+              <p class="text-xs opacity-60 shrink-0">2023/09 – 2025/01</p>
+            </div>
+            <ul class="mt-2 space-y-1 list-disc list-inside opacity-80">
+              <li>每週課業輔導，解說靜定結構分析、應力應變與材料破壞理論。</li>
+              <li>主持期末考前複習課，整理重點題型與解題策略。</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 競賽與獎項 -->
+      <section>
+        <h2 class="text-lg font-semibold text-black dark:text-white border-b border-black/10 dark:border-white/20 pb-2 mb-4">
+          競賽與獎項
+        </h2>
+        <ul class="space-y-3 text-sm">
+          {awards.map(award => (
+            <li class="flex flex-col sm:flex-row sm:justify-between gap-1">
+              <div>
+                <span class="font-medium text-black dark:text-white">{award.name}</span>
+                <span class="opacity-60 ml-2 text-xs">（{award.role}）</span>
+              </div>
+              <span class="text-xs font-semibold text-black dark:text-white shrink-0">{award.result}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <!-- 學歷 -->
+      <section>
+        <h2 class="text-lg font-semibold text-black dark:text-white border-b border-black/10 dark:border-white/20 pb-2 mb-4">
+          學歷
+        </h2>
+        <ul class="space-y-6 text-sm">
+          {education.map(edu => (
+            <li>
+              <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
+                <div>
+                  <p class="font-semibold text-black dark:text-white">{edu.school}</p>
+                  <p class="text-xs opacity-75">{edu.degree}</p>
+                </div>
+                <p class="text-xs opacity-60 shrink-0">{edu.period}</p>
+              </div>
+              <ul class="mt-1 list-disc list-inside opacity-80 space-y-0.5">
+                {edu.notes.map(note => <li>{note}</li>)}
+              </ul>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <!-- 語文與證照 -->
+      <section>
+        <h2 class="text-lg font-semibold text-black dark:text-white border-b border-black/10 dark:border-white/20 pb-2 mb-4">
+          語文能力 & 證照
+        </h2>
+        <ul class="space-y-2 text-sm">
+          {certs.map(cert => (
+            <li class="flex gap-2">
+              <span class="font-medium text-black dark:text-white">{cert.name}：</span>
+              <span class="opacity-80">{cert.score}</span>
+            </li>
+          ))}
+          <li class="flex gap-2">
+            <span class="font-medium text-black dark:text-white">英文：</span>
+            <span class="opacity-80">聽／中等　說／中等　讀／中等　寫／中等</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 聯絡 -->
+      <section class="pb-4">
+        <a
+          href="mailto:ricky5932tw@gmail.com?subject=求職機會 — 張幼昇"
+          class="inline-block py-2 px-6 rounded text-sm bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend"
+        >
+          📧 立即聯絡我
+        </a>
+      </section>
+
+    </div>
+  </BottomLayout>
+</PageLayout>
